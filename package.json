@@ -1,0 +1,34 @@
+{
+	"name": "@devteks/guard-fn",
+	"version": "0.0.1",
+	"description": "function guards",
+	"license": "MIT",
+	"repository": "github:mosamuhana/guard-fn",
+	"author": {
+		"name": "Mosa Muhana <mosamuhana@gmail.com>",
+		"url": "https://github.com/mosamuhana"
+	},
+	"homepage": "https://github.com/mosamuhana/guard-fn",
+	"bugs": {
+		"url": "https://github.com/mosamuhana/guard-fn/issues"
+	},
+	"funding": "https://github.com/mosamuhana/guard-fn?sponsor=1",
+	"files": [
+		"index.js",
+		"index.mjs",
+		"index.d.ts"
+	],
+	"keywords": [
+		"call once",
+		"call func once",
+		"call function once",
+		"once",
+		"call",
+		"guard",
+		"guarded call",
+		"guard function"
+	],
+	"main": "index.js",
+	"module": "index.mjs",
+	"types": "index.d.ts"
+  }
