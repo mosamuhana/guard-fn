@@ -1,34 +1,46 @@
 {
-	"name": "@devteks/guard-fn",
-	"version": "0.0.1",
-	"description": "function guards",
-	"license": "MIT",
-	"repository": "github:mosamuhana/guard-fn",
-	"author": {
-		"name": "Mosa Muhana <mosamuhana@gmail.com>",
-		"url": "https://github.com/mosamuhana"
-	},
-	"homepage": "https://github.com/mosamuhana/guard-fn",
-	"bugs": {
-		"url": "https://github.com/mosamuhana/guard-fn/issues"
-	},
-	"funding": "https://github.com/mosamuhana/guard-fn?sponsor=1",
-	"files": [
-		"index.js",
-		"index.mjs",
-		"index.d.ts"
-	],
-	"keywords": [
-		"call once",
-		"call func once",
-		"call function once",
-		"once",
-		"call",
-		"guard",
-		"guarded call",
-		"guard function"
-	],
-	"main": "index.js",
-	"module": "index.mjs",
-	"types": "index.d.ts"
+  "name": "@devteks/guard-fn",
+  "version": "0.0.2",
+  "description": "function guards",
+  "license": "MIT",
+  "repository": "github:mosamuhana/guard-fn",
+  "author": {
+    "name": "Mosa Muhana <mosamuhana@gmail.com>",
+    "url": "https://github.com/mosamuhana"
+  },
+  "homepage": "https://github.com/mosamuhana/guard-fn",
+  "bugs": {
+    "url": "https://github.com/mosamuhana/guard-fn/issues"
+  },
+  "funding": "https://github.com/mosamuhana/guard-fn?sponsor=1",
+  "keywords": [
+    "call once",
+    "call func once",
+    "call function once",
+    "once",
+    "call",
+    "guard",
+    "guarded call",
+    "guard function"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c && dts-bundle-generator -o dist/index.d.ts src/index.ts"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.3",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
+    "dts-bundle-generator": "^6.7.0",
+    "eslint": "^8.13.0",
+    "eslint-config-google": "^0.14.0",
+    "rollup": "^2.70.1",
+    "typescript": "^4.6.3"
   }
+}

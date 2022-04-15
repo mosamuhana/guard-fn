@@ -1,8 +1,12 @@
 # @devteks/guard-fn
 
 - callOnce: Wrapper for a function to be called only once
+
 - guarded: execute function guarded with pre function and post function
+- guardedAsync: execute async function guarded with pre function and post function
+
 - guard: guards function with pre function and post function and return same function signature
+- guardAsync: guards async function with pre function and post function and return same function signature
 
 ## how to use
 `npm install @devteks/guard-fn --save` 
@@ -10,7 +14,7 @@
 ## Usage:
 import:
 ```javascript
-const { callOnce, guarded, guard } = require('@devteks/guard-fn');
+const { callOnce, guarded, guardedAsync, guard, guardAsync } = require('@devteks/guard-fn');
 // OR
 import { callOnce, guarded, guard } from '@devteks/guard-fn';
 ```
@@ -32,10 +36,10 @@ import { callOnce, guarded, guard } from '@devteks/guard-fn';
 
 ### Using `guarded`
 ```javascript
-const { guarded } = require('@devteks/guard-fn');
+const { guardedAsync } = require('@devteks/guard-fn');
 
 (async () => {
-    const result = await guarded(
+    const result = await guardedAsync(
       async () => {
         await delay(1000);
         return 10;
@@ -55,8 +59,8 @@ const { guarded } = require('@devteks/guard-fn');
 ### Using `guard`
 ```javascript
 (async () => {
-const { guard } = require('@devteks/guard-fn');
-  const fn = guard(
+const { guardAsync } = require('@devteks/guard-fn');
+  const fn = guardAsync(
     async (a: number, b: number) => {
       await delay(10);
       return a + b;
